@@ -30,7 +30,7 @@ function returnResults(params, request, response)
         "Content-type": "application/json"
     };
     var respCode = 200;
-    var data = "{}";
+    var data = JSON.stringify(params);
     var dataEnc = "utf8";
 
     response.writeHead(respCode, headers);
@@ -41,10 +41,10 @@ function returnResults(params, request, response)
 
 function requestRecieved(request, response)
 {
-    var uri = url.parse(request.url);
+    var uri = url.parse(request.url, true);
 
     if (uri.pathname === config.apiEndpoint) {
-        returnResults({}, request, response);
+        returnResults(uri.query, request, response);
     } else {
         returnError(404, "NOT FOUND", request, response);
     }

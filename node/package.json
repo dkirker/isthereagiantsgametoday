@@ -1,0 +1,15 @@
+{
+    "name": "giants-server",
+    "version": "0.1.0",
+    "author": "Donald Kirker <donald.kirker@openmobl.com>",
+    "description": "Is there a Giants game today? server backend.",
+    "keywords": [ "MLB", "Giants", "baseball", "Caltrain" ],
+    "homepage": "https://github.com/dkirker/isthereagiantsgametoday",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dkirker/isthereagiantsgametoday.git"
+    },
+    "licenses": [ { "type": "unknown" } ],
+    "engines": { "node": "*" },
+    "main": "giants-server"
+}

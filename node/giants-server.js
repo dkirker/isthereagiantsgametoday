@@ -33,7 +33,7 @@ function returnResults(params, request, response)
     var data = "{}";
     var dataEnc = "utf8";
 
-	response.writeHead(respCode, headers);
+    response.writeHead(respCode, headers);
     response.write(data, dataEnc);
     response.end();
     return;
@@ -43,7 +43,7 @@ function requestRecieved(request, response)
 {
     var uri = url.parse(request.url);
 
-	if (uri.pathname === config.apiEndpoint) {
+    if (uri.pathname === config.apiEndpoint) {
         returnResults({}, request, response);
     } else {
         returnError(404, "NOT FOUND", request, response);
